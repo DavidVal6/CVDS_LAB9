@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <meta charset="UTF-8"/>
+    <title>Pagina de Login</title>
+    <link rel ="stylesheet" href="css/stylel9.css"/>
+</h:head>
+<h:body>
+    <h:form class="Login-form">
+        <p:inputText class="login-Field" value="#{usuarioBean.user}" placeholder = "Usuario" id = "name"/>
+        <p:password class="login-field" value="#{usuarioBean.password}" placeholder="Contraseña" id="login-password"/>
+        <p:commandButton class="btn btn-primary btn-large btn-block" action="#{usuarioBean.login()}" value="ingresar" id="confirm" update="@all"/>
+    </h:form>
+</h:body>
+</html>

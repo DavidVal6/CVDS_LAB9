@@ -35,6 +35,10 @@ public class UsuarioBean implements Serializable {
     public String getPassword(){
         return password;
     }
+
+    public void setPassword(String password){
+        this.password = password;
+    }
     public String login (){
         Usuario usuario = usuarioRepository.findById(user);
         if(usuario == null || !usuario.getPassword().equals(password)){
